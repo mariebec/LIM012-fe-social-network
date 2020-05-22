@@ -91,11 +91,6 @@ export const eachPost = (objPost) => {
     }
   });
 
-  // Así se crea una función
-  function hola() {
-    // Problemas de contexto
-  }
-
   const selectOption = eachNote.querySelector('.privacy');
   selectOption.addEventListener('change', () => {
     updatePrivacy(objPost.id, selectOption.value);

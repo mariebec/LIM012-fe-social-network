@@ -6,7 +6,7 @@ export const publishPost = (id, userName, newPost, imagePost, time, status, user
   user: id,
   photo: userPhoto,
   img: imagePost,
-  time: time,
+  time,
   privacy: status,
   likes: [],
 });
@@ -23,12 +23,14 @@ export const getAllPosts = callback => firebase.firestore().collection('posts')
 
 export const updatePost = (id, post) => firebase.firestore().collection('posts').doc(id).update({ post: post });
 
+// export const updatePost = (id, obj = {}) => firebase.firestore().collection('posts').doc(id).update(obj); // pasar el objeto
+
 export const updatePrivacy = (id, status) => firebase.firestore().collection('posts').doc(id).update({ privacy: status });
 
 // Comentarios
 export const publishComment = (userName, comment, idPost, date, userId) => firebase.firestore().collection('comments').add({
   user: userName,
-  comment: comment,
+  comment,
   idPost: idPost,
   time: date,
   userId: userId,
