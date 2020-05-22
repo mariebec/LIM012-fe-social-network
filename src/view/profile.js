@@ -30,7 +30,7 @@ export default (notes) => {
               <input type="file" id="selectPhotoProfile" class="hide" accept="image/jpeg, image/png">
               <img class ="photo-profile" src="./img/photo.png">
             </label>
-            <img class="profile-picture" src="${userPhoto || './img/profile-ico.png'}">
+            <img class="profile-picture" src="${userPhoto}">
             <p class="user-name" id="name">${userName}</p>
             <input class="hide validity" id="inputName" type="text" value="${userName}" maxlength="30" pattern="([a-zA-ZÁÉÍÓÚñáéíóúÑ]{1,30}\\s*)+">
           </div>
