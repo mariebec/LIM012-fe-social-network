@@ -17,7 +17,7 @@ export default (notes) => {
     <label id="menu-mobile" class="menu-mobile"></label>
     <nav class="nav-home hide">
       <ul class="menu-home">
-        <li class="btn-go-profile" id="btnProfile"><img class="pro-pic-small" src="${userPhoto || './img/profile-ico.png'}">Perfil</li>
+        <li class="btn-go-profile" id="btnProfile"><img class="pro-pic-small" src="${userPhoto}">Perfil</li>
         <li class="btn-go-out" id="btnSignOut"><img class="ico-sign-out" src="./img/sign-out.png">Cerrar sesión</li>
       </ul>
     </nav>
@@ -29,7 +29,7 @@ export default (notes) => {
         <div class="profile">
           <div class="profile-photo-name">
             <div class="profile-picture">
-              <img id="profilePhoto" class="profile-picture" src="${userPhoto || './img/profile-ico.png'}" alt="">
+              <img id="profilePhoto" class="profile-picture" src="${userPhoto}" alt="">
             </div>
             <p class="user-name">${userName}</p>
           </div>
@@ -43,7 +43,7 @@ export default (notes) => {
       </div>
       <div class="timeline">
         <div class="container-create-post">
-          <img class="like-picture" src="${userPhoto || './img/profile-ico.png'}" alt="">
+          <img class="like-picture" src="${userPhoto}" alt="">
           <div class="post left">
             <textarea class="new-post" id="newPost" placeholder="¿Qué quisieras compartir?"></textarea>
             <img id="showPicture" class="post-new-image" src="#" alt="">
