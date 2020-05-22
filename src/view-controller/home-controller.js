@@ -11,7 +11,8 @@ export const loadingInfo = () => {
     localStorage.setItem('location', doc.data().location);
   });
   localStorage.setItem('name', currentUser.displayName);
-  localStorage.setItem('userphoto', currentUser.photoURL);
+  const userProfilePhoto = currentUser.photoURL || './img/profile-ico.png';
+  localStorage.setItem('userphoto', userProfilePhoto);
   localStorage.setItem('userId', currentUser.uid);
 };
 
